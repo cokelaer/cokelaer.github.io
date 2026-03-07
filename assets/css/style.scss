@@ -4,6 +4,36 @@
 @import 'jekyll-theme-cayman';
 
 /* ============================================================
+   Header improvements
+   ============================================================ */
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-title-block {
+  text-align: center;
+}
+
+.header-title-block .project-tagline {
+  font-size: 1.15rem;
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* ============================================================
    Homepage – custom styles
    ============================================================ */
 
