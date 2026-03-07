@@ -2,3 +2,186 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+/* ============================================================
+   Homepage – custom styles
+   ============================================================ */
+
+/* Wrapper */
+.home-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+/* Section titles */
+.home-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #155799;
+  border-bottom: 3px solid #159957;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  margin-right: 0.4rem;
+}
+
+/* ---- Talks list ---- */
+.talks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talks-list li {
+  padding: 0.6rem 0.8rem;
+  border-left: 4px solid #159957;
+  margin-bottom: 0.75rem;
+  background: #f6faf6;
+  border-radius: 0 6px 6px 0;
+}
+
+.talks-list li a {
+  color: #155799;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.talks-list li a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Software cards ---- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d1e8d1;
+  border-radius: 8px;
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(21, 87, 153, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(21, 87, 153, 0.18);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.6rem;
+  color: #155799;
+}
+
+.card h3 a {
+  color: #155799;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #444;
+  flex: 1;
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+.card-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-links a {
+  font-size: 0.8rem;
+  background: #155799;
+  color: #fff !important;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-links a:hover {
+  background: #159957;
+}
+
+/* ---- Publication boxes ---- */
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.pub-card {
+  background: #fff;
+  border: 1px solid #c8dff8;
+  border-left: 5px solid #155799;
+  border-radius: 6px;
+  padding: 1.2rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(21, 87, 153, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.pub-card:hover {
+  box-shadow: 0 4px 16px rgba(21, 87, 153, 0.16);
+  transform: translateY(-3px);
+}
+
+.pub-title {
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+  line-height: 1.4;
+}
+
+.pub-title a {
+  color: #155799;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  text-decoration: underline;
+  color: #159957;
+}
+
+.pub-journal {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #159957;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pub-summary {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .cards-grid,
+  .pub-grid {
+    grid-template-columns: 1fr;
+  }
+}

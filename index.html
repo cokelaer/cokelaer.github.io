@@ -3,16 +3,112 @@ layout: default
 title: Home
 use-site-title: true
 ---
-<div class="blurb">
-    <h1></h1>
 
-    <h2>Talks</h2>
-    <div> 
-        <ul>
-            <li><a href="https://cokelaer.github.io/talks/2024_june_repro_IP/index.html">Snakemake introduction</a></li>
-        </ul>
+<div class="home-container">
+
+  <!-- ===== TALKS ===== -->
+  <section class="home-section" id="talks">
+    <h2 class="section-title"><span class="section-icon">🎤</span> Talks</h2>
+    <ul class="talks-list">
+      <li>
+        <a href="https://cokelaer.github.io/talks/2024_june_repro_IP/index.html">
+          Snakemake introduction &mdash; Reproducibility at Institut Pasteur, June 2024
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== SOFTWARE ===== -->
+  <section class="home-section" id="software">
+    <h2 class="section-title"><span class="section-icon">💻</span> Software</h2>
+    <div class="cards-grid">
+
+      <div class="card">
+        <h3><a href="https://github.com/sequana/sequana" target="_blank">Sequana</a></h3>
+        <p>A set of Snakemake pipelines and tools dedicated to NGS (Next Generation Sequencing) analysis, including quality control, variant calling, and coverage analysis.</p>
+        <div class="card-links">
+          <a href="https://sequana.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/sequana/sequana" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/cokelaer/bioservices" target="_blank">BioServices</a></h3>
+        <p>A Python package to access biological web services programmatically, including UniProt, KEGG, ChEMBL, WikiPathways and many more.</p>
+        <div class="card-links">
+          <a href="https://bioservices.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/cokelaer/bioservices" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/damona/damona" target="_blank">Damona</a></h3>
+        <p>A manager for bioinformatics singularity/apptainer containers. Simplifies deployment and reproducibility of bioinformatics environments.</p>
+        <div class="card-links">
+          <a href="https://damona.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/damona/damona" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/cokelaer/easydev" target="_blank">EasyDev</a></h3>
+        <p>Utilities to ease the development of Python packages, including configuration management, logging helpers, and testing tools.</p>
+        <div class="card-links">
+          <a href="https://easydev.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/cokelaer/easydev" target="_blank">GitHub</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
+  <!-- ===== PUBLICATIONS ===== -->
+  <section class="home-section" id="publications">
+    <h2 class="section-title"><span class="section-icon">📄</span> Publications</h2>
+    <div class="pub-grid">
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/gigascience/giy110" target="_blank">
+            Sequana Coverage: Detection of Genomic Variations with a DNA Coverage Analysis Tool
+          </a>
+        </h3>
+        <div class="pub-journal">GigaScience, 2018</div>
+        <p class="pub-summary">Presents a standalone tool for analysing DNA coverage data from sequencing experiments. The method detects low and high coverage regions, identifies outliers, and generates HTML reports for quality control.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.21105/joss.00352" target="_blank">
+            Sequana: a set of Snakemake NGS pipelines
+          </a>
+        </h3>
+        <div class="pub-journal">Journal of Open Source Software, 2017</div>
+        <p class="pub-summary">Introduces the Sequana framework providing a collection of modular, reproducible NGS pipelines built on Snakemake. Covers RNA-seq, variant calling, quality control, and de-novo assembly workflows.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://academic.oup.com/bioinformatics/article/29/24/3241/194439" target="_blank">
+            BioServices: a common Python package to access biological web services
+          </a>
+        </h3>
+        <div class="pub-journal">Bioinformatics, 2013</div>
+        <p class="pub-summary">Describes BioServices, a Python package providing a unified interface to many biological databases and web services. Removes the need to manage heterogeneous APIs and simplifies bioinformatics scripting workflows.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/bioinformatics/bts579" target="_blank">
+            Training Signalling Pathway Maps to Biochemical Data with Constrained Fuzzy Logic
+          </a>
+        </h3>
+        <div class="pub-journal">PLOS Computational Biology, 2012</div>
+        <p class="pub-summary">Introduces a constrained fuzzy logic formalism to model signal transduction networks, enabling inference of pathway activity from phosphoproteomic data. Implemented in the open-source CellNOpt toolbox.</p>
+      </div>
+
+    </div>
+  </section>
 
 </div>
 
