@@ -1,4 +1,4 @@
 
 
-resource for the website http://thomas-cokelaer.github.io
+resource for the website http://cokelaer.github.io
 
