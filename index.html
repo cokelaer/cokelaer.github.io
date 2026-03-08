@@ -6,18 +6,6 @@ use-site-title: true
 
 <div class="home-container">
 
-  <!-- ===== TALKS ===== -->
-  <section class="home-section" id="talks">
-    <h2 class="section-title"><span class="section-icon">🎤</span> Talks</h2>
-    <ul class="talks-list">
-      <li>
-        <a href="https://cokelaer.github.io/talks/2024_june_repro_IP/index.html">
-          Snakemake introduction &mdash; Reproducibility at Institut Pasteur, June 2024
-        </a>
-      </li>
-    </ul>
-  </section>
-
   <!-- ===== SOFTWARE ===== -->
   <section class="home-section" id="software">
     <h2 class="section-title"><span class="section-icon">💻</span> Software</h2>
@@ -56,6 +44,24 @@ use-site-title: true
         <div class="card-links">
           <a href="https://easydev.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/cokelaer/easydev" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/cokelaer/fitter" target="_blank">Fitter</a></h3>
+        <p>A Python package to fit probability distributions to data. Automatically tests all distributions from SciPy, ranks them by goodness-of-fit, and provides simple visualisation of the best fits.</p>
+        <div class="card-links">
+          <a href="https://fitter.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/cokelaer/fitter" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/cokelaer/spectrum" target="_blank">Spectrum</a></h3>
+        <p>A Python package for spectral analysis, providing classical and modern methods for power spectrum estimation including Fourier, Welch, ARMA, and multi-taper approaches.</p>
+        <div class="card-links">
+          <a href="https://pyspectrum.readthedocs.io" target="_blank">Docs</a>
+          <a href="https://github.com/cokelaer/spectrum" target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -107,7 +113,49 @@ use-site-title: true
         <p class="pub-summary">Introduces a constrained fuzzy logic formalism to model signal transduction networks, enabling inference of pathway activity from phosphoproteomic data. Implemented in the open-source CellNOpt toolbox.</p>
       </div>
 
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1371/journal.pone.0050979" target="_blank">
+            CellNOptR: a flexible toolkit to train protein signalling networks to data using multiple logic formalisms
+          </a>
+        </h3>
+        <div class="pub-journal">PLOS ONE, 2012</div>
+        <p class="pub-summary">Presents CellNOptR, an R package for training Boolean and fuzzy logic models of signalling networks to phosphoproteomic data. Supports multiple logic formalisms and integrates with the broader CellNOpt toolbox ecosystem.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/bioinformatics/btq484" target="_blank">
+            CNOFuzzy: a flexible toolkit to train fuzzy logic models to data
+          </a>
+        </h3>
+        <div class="pub-journal">Bioinformatics, 2010</div>
+        <p class="pub-summary">Describes the CNOFuzzy toolbox for training fuzzy logic models of signal transduction to experimental data, extending Boolean modelling to handle graded biological responses and continuous measurements.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1186/1752-0509-3-133" target="_blank">
+            CellNOpt: using signalling pathway models to predict dynamic drug-combination effects
+          </a>
+        </h3>
+        <div class="pub-journal">BMC Systems Biology, 2009</div>
+        <p class="pub-summary">Introduces the CellNOpt framework for training prior knowledge signalling network models to experimental data, enabling prediction of drug-combination effects and identification of network rewiring in disease contexts.</p>
+      </div>
+
     </div>
+  </section>
+
+  <!-- ===== TALKS ===== -->
+  <section class="home-section" id="talks">
+    <h2 class="section-title"><span class="section-icon">🎤</span> Talks</h2>
+    <ul class="talks-list">
+      <li>
+        <a href="https://cokelaer.github.io/talks/2024_june_repro_IP/index.html">
+          Snakemake introduction &mdash; Reproducibility at Institut Pasteur, June 2024
+        </a>
+      </li>
+    </ul>
   </section>
 
 </div>
