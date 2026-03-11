@@ -20,6 +20,7 @@ use-site-title: true
         <div class="card-links">
           <a href="https://sequana.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/sequana/sequana" target="_blank">GitHub</a>
+          <a href="https://github.com/sequana/sequana/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -32,6 +33,7 @@ use-site-title: true
         <div class="card-links">
           <a href="https://bioservices.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/cokelaer/bioservices" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/bioservices/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -44,6 +46,7 @@ use-site-title: true
         <div class="card-links">
           <a href="https://bioconvert.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/bioconvert/bioconvert" target="_blank">GitHub</a>
+          <a href="https://github.com/bioconvert/bioconvert/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -51,11 +54,12 @@ use-site-title: true
         <div class="card-logo">
           <img src="/assets/images/damona.png" alt="Damona logo">
         </div>
-        <h3><a href="https://github.com/damona/damona" target="_blank">Damona</a></h3>
+        <h3><a href="https://github.com/cokelaer/damona" target="_blank">Damona</a></h3>
         <p>A manager for bioinformatics singularity/apptainer containers. Simplifies deployment and reproducibility of bioinformatics environments.</p>
         <div class="card-links">
           <a href="https://damona.readthedocs.io" target="_blank">Docs</a>
-          <a href="https://github.com/damona/damona" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/damona" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/damona/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -65,6 +69,7 @@ use-site-title: true
         <div class="card-links">
           <a href="https://easydev.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/cokelaer/easydev" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/easydev/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -77,15 +82,20 @@ use-site-title: true
         <div class="card-links">
           <a href="https://fitter.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/cokelaer/fitter" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/fitter/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
       <div class="card">
+        <div class="card-logo">
+          <img src="/assets/images/spectrum.png" alt="Spectrum logo">
+        </div>
         <h3><a href="https://github.com/cokelaer/spectrum" target="_blank">Spectrum</a></h3>
         <p>A Python package for spectral analysis, providing classical and modern methods for power spectrum estimation including Fourier, Welch, ARMA, and multi-taper approaches.</p>
         <div class="card-links">
           <a href="https://pyspectrum.readthedocs.io" target="_blank">Docs</a>
           <a href="https://github.com/cokelaer/spectrum" target="_blank">GitHub</a>
+          <a href="https://github.com/cokelaer/spectrum/stargazers" target="_blank">⭐ Stars</a>
         </div>
       </div>
 
@@ -96,6 +106,16 @@ use-site-title: true
   <section class="home-section" id="publications">
     <h2 class="section-title"><span class="section-icon">📄</span> Publications</h2>
     <div class="pub-grid">
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/bioinformatics/btad227" target="_blank">
+            Reprohackathons: promoting reproducibility in bioinformatics through training
+          </a>
+        </h3>
+        <div class="pub-journal">Bioinformatics, 2023</div>
+        <p class="pub-summary">Presents the Reprohackathon, a Master's course running at Université Paris-Saclay for three years with 123 students, combining lessons on reproducibility tools (versioning, containers, workflow systems) with a 3–4 month hands-on data-reanalysis project. Shows that in-depth teaching of reproducibility concepts and tools significantly improves students' understanding and abilities.</p>
+      </div>
 
       <div class="pub-card">
         <h3 class="pub-title">
@@ -189,9 +209,42 @@ use-site-title: true
           Snakemake introduction &mdash; Reproducibility at Institut Pasteur, June 2024
         </a>
       </li>
+      <li>
+        <a href="https://sequana.github.io/talks/2024_LORA_IP/index.html" target="_blank">
+          LORA: a Sequana pipeline for Long-Read Assembly &mdash; Nanopore day, Institut Pasteur, March 2024
+        </a>
+      </li>
+      <li>
+        <a href="https://sequana.github.io/talks/2024_repro_IP/index.html" target="_blank">
+          Sequana and Damona: a duo for reproducible NGS analysis &mdash; Institut Pasteur, February 2024
+        </a>
+      </li>
+      <li>
+        <a href="http://f1000research.com/posters/5-1767" target="_blank">
+          Sequana: a set of Snakemake NGS pipelines &mdash; JOBIM poster, Lyon, 2016
+        </a>
+      </li>
     </ul>
   </section>
 
 </div>
 
-
+<script>
+(function () {
+  document.querySelectorAll('.card-links a[href*="/stargazers"]').forEach(function (link) {
+    var m = link.href.match(/github\.com\/([^/]+\/[^/]+)\/stargazers/);
+    if (!m) return;
+    fetch('https://api.github.com/repos/' + m[1])
+      .then(function (r) {
+        if (!r.ok) throw new Error('GitHub API ' + r.status + ' for ' + m[1]);
+        return r.json();
+      })
+      .then(function (d) {
+        if (typeof d.stargazers_count === 'number') {
+          link.textContent = '\u2B50 ' + d.stargazers_count.toLocaleString();
+        }
+      })
+      .catch(function (err) { console.warn('star count fetch failed:', err); });
+  });
+})();
+</script>
