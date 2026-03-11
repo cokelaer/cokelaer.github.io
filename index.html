@@ -229,4 +229,22 @@ use-site-title: true
 
 </div>
 
-
+<script>
+(function () {
+  document.querySelectorAll('.card-links a[href*="/stargazers"]').forEach(function (link) {
+    var m = link.href.match(/github\.com\/([^/]+\/[^/]+)\/stargazers/);
+    if (!m) return;
+    fetch('https://api.github.com/repos/' + m[1])
+      .then(function (r) {
+        if (!r.ok) throw new Error('GitHub API ' + r.status + ' for ' + m[1]);
+        return r.json();
+      })
+      .then(function (d) {
+        if (typeof d.stargazers_count === 'number') {
+          link.textContent = '\u2B50 ' + d.stargazers_count.toLocaleString();
+        }
+      })
+      .catch(function (err) { console.warn('star count fetch failed:', err); });
+  });
+})();
+</script>
