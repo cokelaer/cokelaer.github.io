@@ -7,22 +7,31 @@
    Header improvements
    ============================================================ */
 
+.page-header {
+  padding: 1.5rem 1rem;
+}
+
 .header-inner {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.75rem;
 }
 
 .header-title-block {
   text-align: center;
 }
 
+.header-title-block .project-name {
+  font-size: 2rem;
+  margin: 0;
+}
+
 .header-title-block .project-tagline {
-  font-size: 1.15rem;
-  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
   opacity: 0.9;
 }
 

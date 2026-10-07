@@ -6,6 +6,17 @@ use-site-title: true
 
 <div class="home-container">
 
+  <!-- ===== ABOUT ===== -->
+  <section class="home-section" id="about">
+    <h2 class="section-title"><span class="section-icon">👋</span> About Me</h2>
+
+    <p>I am a Research Engineer in the Parasitology department at Institut Pasteur in Paris, where I have been for the past two years. My work sits between biology and software: I build tools that help scientists analyse sequencing data without having to fight their computing environment.</p>
+
+    <p>Before that, I led the dry lab of the Biomics sequencing platform at Institut Pasteur. Running a platform means analysing many projects with the same care, again and again. That experience shaped how I think about software, and it is the reason I started Damona, a tool for managing and sharing reproducible software environments. Earlier still, I spent five years at the European Bioinformatics Institute (EBI) in Cambridge. My academic training is in physics, with a PhD, and I still approach data problems with that mindset.</p>
+
+    <p>I am the principal developer of several open-source projects: <a href="https://github.com/sequana/sequana" target="_blank">Sequana</a>, a collection of Snakemake pipelines for NGS analysis, <a href="https://github.com/cokelaer/bioservices" target="_blank">Bioservices</a>, for accessing biological web services from Python, <a href="https://github.com/cokelaer/damona" target="_blank">Damona</a>, and <a href="https://github.com/bioconvert/bioconvert" target="_blank">Bioconvert</a>, for converting between bioinformatics file formats. What connects them is reproducibility: an analysis should give the same result next month, on another machine, in someone else's hands.</p>
+  </section>
+
   <!-- ===== SOFTWARE ===== -->
   <section class="home-section" id="software">
     <h2 class="section-title"><span class="section-icon">💻</span> Software</h2>
@@ -106,6 +117,26 @@ use-site-title: true
   <section class="home-section" id="publications">
     <h2 class="section-title"><span class="section-icon">📄</span> Publications</h2>
     <div class="pub-grid">
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/jleuko/qiag027" target="_blank">
+            Intrinsic differences in hamster and mouse macrophage biology correlate with susceptibility to Leishmania donovani infection
+          </a>
+        </h3>
+        <div class="pub-journal">Journal of Leukocyte Biology, 2026</div>
+        <p class="pub-summary">Compares bone marrow-derived macrophages from susceptible hamsters and resistant mice to identify intrinsic cellular features behind differential susceptibility to <em>Leishmania donovani</em>. Provides a validated protocol for generating hamster macrophages and a comparative transcriptomic analysis highlighting rodent-specific metabolic and immune pathways.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1093/nargab/lqag062" target="_blank">
+            LORA: a polymorphic multi-sample long read assembly pipeline
+          </a>
+        </h3>
+        <div class="pub-journal">NAR Genomics and Bioinformatics, 2026</div>
+        <p class="pub-summary">Presents LORA, a reproducible Snakemake pipeline that assembles genomes from long-read (PacBio and Nanopore) data using several assemblers, including Canu, HiFiasm, Flye and Unicycler. Adds quality assessment, interactive HTML reports, BLAST-based taxonomic identification and completeness evaluation. Distributed as part of the Sequana project.</p>
+      </div>
 
       <div class="pub-card">
         <h3 class="pub-title">
