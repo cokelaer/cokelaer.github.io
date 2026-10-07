@@ -17,8 +17,9 @@
 
     <header class="page-header" role="banner">
       <div class="header-inner">
+        <a class="header-avatar" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/avatar.png' | relative_url }}" alt="Avatar"></a>
         <div class="header-title-block">
-          <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+          <h1 class="project-name">{% if page.use-site-title %}{{ site.title }}{% else %}{{ page.title | default: site.title | default: site.github.repository_name }}{% endif %}</h1>
           <p class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
         </div>
         <nav class="header-nav" aria-label="Site navigation">
